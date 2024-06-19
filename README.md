@@ -16,7 +16,7 @@ Ce module vient se connecter sous le châssis de la voiture électrique 33005.10
 - Dimensions (L x l x h) : 70 x 45 x 25 mm
 
 ## Environnement nécessaire :
-- Une voiture électrique [33005](https://www.pierron.fr)
+- Une voiture électrique [33005](https://www.pierron.fr/voiture-electrique.html)
 
 ## Ressources à télécharger
 
