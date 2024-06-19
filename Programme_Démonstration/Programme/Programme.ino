@@ -5,7 +5,7 @@
    Programme principal
 */
 
-// Déclarations des entrées et sorties
+// Déclarations des entrées et sorties.
 #define AMPOULE_DROIT 2
 #define AMPOULE_GAUCHE 12
 #define DEL 13
@@ -25,8 +25,10 @@
 #define MOTEUR_GAUCHE_ARRIERE 8
 
 void setup() {
+  // Définition de la vitesse de communication de la liaison USB.
   Serial.begin(9600);
   delay(1000);
+  // Définition des entées et des sorties de la carte Arduino NANO.
   pinMode(AMPOULE_DROIT, OUTPUT);
   pinMode(AMPOULE_GAUCHE, OUTPUT);
   pinMode(DEL, OUTPUT);
@@ -47,9 +49,10 @@ void setup() {
 }
 
 void loop() {
-
+  / ** À compléter. ** /
 }
 
+// Fonction permettant de faire avancer la voiture éléctrique (iPWM -> 0 à 255).
 void Avancer(int iPWM) {
   analogWrite(VITESSE_MOTEUR_GAUCHE, iPWM);
   analogWrite(VITESSE_MOTEUR_DROIT, iPWM);
@@ -59,6 +62,7 @@ void Avancer(int iPWM) {
   digitalWrite(MOTEUR_GAUCHE_ARRIERE, LOW);
 }
 
+// Fonction permettant de faire reculer la voiture éléctrique (iPWM -> 0 à 255).
 void Reculer(int iPWM) {
   analogWrite(VITESSE_MOTEUR_GAUCHE, iPWM);
   analogWrite(VITESSE_MOTEUR_DROIT, iPWM);
@@ -68,6 +72,7 @@ void Reculer(int iPWM) {
   digitalWrite(MOTEUR_GAUCHE_ARRIERE, HIGH);
 }
 
+// Fonction permettant de faire tourner à droite la voiture éléctrique (iPWM -> 0 à 255).
 void Tourner_Droite(int iPWM) {
   analogWrite(VITESSE_MOTEUR_GAUCHE, 0);
   analogWrite(VITESSE_MOTEUR_DROIT, iPWM);
@@ -77,6 +82,7 @@ void Tourner_Droite(int iPWM) {
   digitalWrite(MOTEUR_GAUCHE_ARRIERE, LOW);
 }
 
+// Fonction permettant de faire tourner à gauche la voiture éléctrique (iPWM -> 0 à 255).
 void Tourner_Gauche(int iPWM) {
   analogWrite(VITESSE_MOTEUR_GAUCHE, iPWM);
   analogWrite(VITESSE_MOTEUR_DROIT, 0);
@@ -86,18 +92,22 @@ void Tourner_Gauche(int iPWM) {
   digitalWrite(MOTEUR_GAUCHE_ARRIERE, LOW);
 }
 
+// Fonction permettant de lire l'état logique du bouton poussoir (0 ou 1).
 int Lecture_Bouton_Poussoir(void) {
   return digitalRead(BOUTON_POUSSOIR);
 }
 
+// Fonction permettant de lire l'état logique de l'interrupteur droit (0 ou 1).
 int Lecture_Interrupteur_Droit(void) {
   return digitalRead(INTERRUPTEUR_DROIT);
 }
 
+// Fonction permettant de lire l'état logique de l'interrupteur gauche (0 ou 1).
 int Lecture_Interrupteur_Gauche(void) {
   return digitalRead(INTERRUPTEUR_GAUCHE);
 }
 
+// Fonction permettant d'allumer ou d'éteindre l'ampoule droite (0 ou 1).
 void Allumer_Eteindre_Ampoule_Droit(bool bEtat) {
   if (bEtat == 1) {
     digitalWrite(AMPOULE_DROIT, HIGH);
@@ -106,6 +116,7 @@ void Allumer_Eteindre_Ampoule_Droit(bool bEtat) {
   }
 }
 
+// Fonction permettant d'allumer ou d'éteindre l'ampoule gauche (0 ou 1).
 void Allumer_Eteindre_Ampoule_Gauche(bool bEtat) {
   if (bEtat == 1) {
     digitalWrite(AMPOULE_GAUCHE, HIGH);
@@ -114,6 +125,7 @@ void Allumer_Eteindre_Ampoule_Gauche(bool bEtat) {
   }
 }
 
+// Fonction permettant d'allumer ou d'éteindre la diode électroluminescente (0 ou 1).
 void Allumer_Eteindre_DEL(bool bEtat) {
   if (bEtat == 1) {
     digitalWrite(DEL, HIGH);
@@ -122,18 +134,21 @@ void Allumer_Eteindre_DEL(bool bEtat) {
   }
 }
 
+// Fonction permettant de calculer la tension du potentiomètre.
 float Lecture_Potentiometre(void) {
   float fMesure = 0;
   fMesure = analogRead(POTEMTIOMETRE);
   return (fMesure * (5.0 / 1023));
 }
 
+// Fonction permettant de calculer la tension de la photodiode.
 float Lecture_Photodiode(void) {
   float fMesure = 0;
   fMesure = analogRead(PHOTODIODE);
   return (fMesure * (5.0 / 1023));
 }
 
+// Fonction permettant de calculer la distance en centimetre (3 cm à 3 m) qui permettait un objet du capteur à ultrasons.
 int Lecture_Distance(void) {
   long lMesure = 0;
   digitalWrite(ULTRASONS_TRIG, LOW);

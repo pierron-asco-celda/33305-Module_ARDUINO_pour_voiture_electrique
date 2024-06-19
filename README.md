@@ -20,8 +20,6 @@ Ce module vient se connecter sous le châssis de la voiture électrique 33005.10
 
 ## Ressources à télécharger
 
-- Application : [Télécharger]()
-
 - Documentation : [Télécharger]()
 
 ## Programmes de démonstrations
