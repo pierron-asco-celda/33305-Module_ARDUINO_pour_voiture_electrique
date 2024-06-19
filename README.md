@@ -6,10 +6,17 @@
 
 <div align='justify'>
 
+Ce module vient se connecter sous le châssis de la voiture électrique 33005.10. En y connectant un carte Arduino™ de type Nano, l’ensemble des composants électriques seront pilotables par ordinateur. Il sera alors possible de réaliser un programme qui, téléversé dans la carte, fera fonctionner la voiture tel que vous l’avez souhaité.
 
 </div>
 
 ## Caractéristiques techniques :
+- Compatible Arduino™ Nano
+- Équipée d'un capteur ultrasons et d'un buzzer
+- Dimensions (L x l x h) : 70 x 45 x 25 mm
+
+## Environnement nécessaire :
+- Une voiture électrique [33005]()
 
 ## Ressources à télécharger
 
