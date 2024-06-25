@@ -1,17 +1,16 @@
 Maquette MT33305
-Bibliothèque : Pierron_33305.h
 
 
-Capteur ultrasons HC-SR04 3 cm à 3 m : Entrée analogique(Echo) A0, sortie analogique(Trig) A5
-Potentiomètre 100Ω : Entreé analogique A7
+Capteur ultrasons HC-SR04 2 cm à 4 m : Entrée analogique(Echo) A0, sortie analogique(Trig) A5
+Potentiomètre 100Ω : Entrée analogique A7
 Ampoule 4V droit : Sortie digitale 12
 Ampoule 4V gauche : Sortie digitale 2
 DEL blanche : Sortie digitale 13
-Bouton poussoir : Entreé digitale 3
-Interrupteur droit : Entreé digitale 10
-Interrupteur gauche : Entreé analogique A3
+Bouton poussoir : Entrée digitale 3
+Interrupteur droit : Entrée digitale 10
+Interrupteur gauche : Entrée analogique A3
 Buzzer : Sortie digitale 11
-Capteur photodiode BPW34 : Entreé analogique A4
+Capteur photodiode BPW34 : Entrée analogique A4
 Vitesse moteur droit : Sortie digitale(PWM) 9
 Vitesse moteur gauche : Sortie digitale(PWM) 6
 Sens rotation moteur droit : Sorties digitales 4 et 5

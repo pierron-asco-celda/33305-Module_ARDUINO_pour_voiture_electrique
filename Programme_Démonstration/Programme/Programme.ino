@@ -26,7 +26,7 @@
 
 void setup() {
   // Définition de la vitesse de communication de la liaison USB.
-  Serial.begin(9600);
+  Serial.begin(115200);
   delay(1000);
   // Définition des entées et des sorties de la carte Arduino NANO.
   pinMode(AMPOULE_DROIT, OUTPUT);
@@ -49,7 +49,7 @@ void setup() {
 }
 
 void loop() {
-  / ** À compléter. ** /
+  
 }
 
 // Fonction permettant de faire avancer la voiture éléctrique (iPWM -> 0 à 255).
@@ -138,24 +138,30 @@ void Allumer_Eteindre_DEL(bool bEtat) {
 float Lecture_Potentiometre(void) {
   float fMesure = 0;
   fMesure = analogRead(POTEMTIOMETRE);
-  return (fMesure * (5.0 / 1023));
+  return (fMesure * (3.3 / 1023));
 }
 
 // Fonction permettant de calculer la tension de la photodiode.
 float Lecture_Photodiode(void) {
   float fMesure = 0;
   fMesure = analogRead(PHOTODIODE);
-  return (fMesure * (5.0 / 1023));
+  return (fMesure * (3.3 / 1023));
 }
 
 // Fonction permettant de calculer la distance en centimetre (3 cm à 3 m) qui permettait un objet du capteur à ultrasons.
 int Lecture_Distance(void) {
   long lMesure = 0;
   digitalWrite(ULTRASONS_TRIG, LOW);
-  delayMicroseconds(5);
+  delayMicroseconds(2);
   digitalWrite(ULTRASONS_TRIG, HIGH);
   delayMicroseconds(10);
   digitalWrite(ULTRASONS_TRIG, LOW);
   lMesure = pulseIn(ULTRASONS_ECHO, HIGH);
+  delay(25);
   return (lMesure * (0.034 / 2));
+}
+
+// Fonction permettant d'émettre un son
+void Buzzer(int iFrequence, long lDuree){
+  tone(BUZZER, iFrequence, lDuree);
 }
