@@ -1,17 +1,17 @@
 Maquette MT33305
 
 
-Capteur ultrasons HC-SR04 2 cm à 4 m : Entrée analogique(Echo) A0, sortie analogique(Trig) A5
-Potentiomètre 100Ω : Entrée analogique A7
-Ampoule 4V droit : Sortie digitale 12
+Potentiomètre 100Ω : Entrée analogique A0
+Capteur photodiode BPW34 : Entrée analogique A1
+Bouton poussoir : Entrée analogique A2
+Interrupteur droit : Entrée analogique A3
+Interrupteur gauche : Entrée analogique A4
 Ampoule 4V gauche : Sortie digitale 2
-DEL blanche : Sortie digitale 13
-Bouton poussoir : Entrée digitale 3
-Interrupteur droit : Entrée digitale 10
-Interrupteur gauche : Entrée analogique A3
-Buzzer : Sortie digitale 11
-Capteur photodiode BPW34 : Entrée analogique A4
-Vitesse moteur droit : Sortie digitale(PWM) 9
+Ampoule 4V droit : Sortie digitale 4
+DEL blanche : Sortie digitale(PWM) 3
+Buzzer : Sortie digitale 13
+Vitesse moteur droit : Sortie digitale(PWM) 5
 Vitesse moteur gauche : Sortie digitale(PWM) 6
-Sens rotation moteur droit : Sorties digitales 4 et 5
-Sens rotation moteur gauche : Sorties digitales 7 et 8
+Sens rotation moteur droit : Sorties digitales 7 et 8
+Sens rotation moteur gauche : Sorties digitales 11 et 12
+Capteur ultrasons HC-SR04 2 cm à 4 m : Entrée digitale(Echo) 9, sortie digitale(Trig) 10

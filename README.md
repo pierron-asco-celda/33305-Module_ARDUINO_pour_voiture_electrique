@@ -36,23 +36,23 @@ Ce module vient se connecter sous le châssis de la voiture électrique 33005.10
 */
 
 // Déclarations des entrées et sorties.
-#define AMPOULE_DROIT 2
-#define AMPOULE_GAUCHE 12
-#define DEL 13
-#define BOUTON_POUSSOIR 3
-#define POTEMTIOMETRE A7
-#define BUZZER 11
-#define PHOTODIODE A4
-#define INTERRUPTEUR_DROIT 10
-#define INTERRUPTEUR_GAUCHE A3
-#define ULTRASONS_TRIG A5
-#define ULTRASONS_ECHO A0
-#define VITESSE_MOTEUR_GAUCHE 9
+#define AMPOULE_DROIT 4
+#define AMPOULE_GAUCHE 2
+#define DEL 3
+#define BOUTON_POUSSOIR A2
+#define POTEMTIOMETRE A0
+#define BUZZER 13
+#define PHOTODIODE A1
+#define INTERRUPTEUR_DROIT A3
+#define INTERRUPTEUR_GAUCHE A4
+#define ULTRASONS_TRIG 10
+#define ULTRASONS_ECHO 9
+#define VITESSE_MOTEUR_GAUCHE 5
 #define VITESSE_MOTEUR_DROIT 6
-#define MOTEUR_DROIT_AVANT 4
-#define MOTEUR_DROIT_ARRIERE 5
-#define MOTEUR_GAUCHE_AVANT 7
-#define MOTEUR_GAUCHE_ARRIERE 8
+#define MOTEUR_DROIT_AVANT 7
+#define MOTEUR_DROIT_ARRIERE 8
+#define MOTEUR_GAUCHE_AVANT 11
+#define MOTEUR_GAUCHE_ARRIERE 12
 
 void setup() {
   // Définition de la vitesse de communication de la liaison USB.
