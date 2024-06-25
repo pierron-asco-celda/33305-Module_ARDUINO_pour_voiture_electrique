@@ -49,10 +49,10 @@ void setup() {
 }
 
 void loop() {
-  
+
 }
 
-// Fonction permettant de faire avancer la voiture éléctrique (iPWM -> 0 à 255).
+// Fonction permettant de faire avancer la voiture électrique (iPWM -> 0 à 255).
 void Avancer(int iPWM) {
   analogWrite(VITESSE_MOTEUR_GAUCHE, iPWM);
   analogWrite(VITESSE_MOTEUR_DROIT, iPWM);
@@ -62,7 +62,7 @@ void Avancer(int iPWM) {
   digitalWrite(MOTEUR_GAUCHE_ARRIERE, LOW);
 }
 
-// Fonction permettant de faire reculer la voiture éléctrique (iPWM -> 0 à 255).
+// Fonction permettant de faire reculer la voiture électrique (iPWM -> 0 à 255).
 void Reculer(int iPWM) {
   analogWrite(VITESSE_MOTEUR_GAUCHE, iPWM);
   analogWrite(VITESSE_MOTEUR_DROIT, iPWM);
@@ -72,7 +72,7 @@ void Reculer(int iPWM) {
   digitalWrite(MOTEUR_GAUCHE_ARRIERE, HIGH);
 }
 
-// Fonction permettant de faire tourner à droite la voiture éléctrique (iPWM -> 0 à 255).
+// Fonction permettant de faire tourner à droite la voiture électrique (iPWM -> 0 à 255).
 void Tourner_Droite(int iPWM) {
   analogWrite(VITESSE_MOTEUR_GAUCHE, 0);
   analogWrite(VITESSE_MOTEUR_DROIT, iPWM);
@@ -82,7 +82,7 @@ void Tourner_Droite(int iPWM) {
   digitalWrite(MOTEUR_GAUCHE_ARRIERE, LOW);
 }
 
-// Fonction permettant de faire tourner à gauche la voiture éléctrique (iPWM -> 0 à 255).
+// Fonction permettant de faire tourner à gauche la voiture électrique (iPWM -> 0 à 255).
 void Tourner_Gauche(int iPWM) {
   analogWrite(VITESSE_MOTEUR_GAUCHE, iPWM);
   analogWrite(VITESSE_MOTEUR_DROIT, 0);
@@ -148,7 +148,7 @@ float Lecture_Photodiode(void) {
   return (fMesure * (3.3 / 1023));
 }
 
-// Fonction permettant de calculer la distance en centimetre (3 cm à 3 m) qui permettait un objet du capteur à ultrasons.
+// Fonction permettant de calculer la distance en centimetre (2 cm à 4 m) qui permettait un objet du capteur à ultrasons.
 int Lecture_Distance(void) {
   long lMesure = 0;
   digitalWrite(ULTRASONS_TRIG, LOW);
@@ -161,7 +161,7 @@ int Lecture_Distance(void) {
   return (lMesure * (0.034 / 2));
 }
 
-// Fonction permettant d'émettre un son
+// Fonction permettant d'émettre un son.
 void Buzzer(int iFrequence, long lDuree){
   tone(BUZZER, iFrequence, lDuree);
 }
