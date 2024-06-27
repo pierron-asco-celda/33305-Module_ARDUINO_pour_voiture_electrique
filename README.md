@@ -79,11 +79,13 @@ void setup() {
 }
 
 void loop() {
-
+  /* À compléter en fonction des besoins par l'appel d'une ou plusieurs fonctions ci-dessous. */
+  /* -> [valeur retournée ou non] nom de la fonction (argument(s) ou non) {} */
 }
 
-// Fonction permettant de faire avancer la voiture électrique (iPWM -> 0 à 255).
-void Avancer(int iPWM) {
+// Fonction permettant de faire avancer la voiture électrique (iPuissance -> 0 à 100%).
+void Avancer(int iPuissance) {
+  int iPWM = map(iPuissance, 0, 100, 0, 255);
   analogWrite(VITESSE_MOTEUR_GAUCHE, iPWM);
   analogWrite(VITESSE_MOTEUR_DROIT, iPWM);
   digitalWrite(MOTEUR_DROIT_AVANT, HIGH);
@@ -92,8 +94,9 @@ void Avancer(int iPWM) {
   digitalWrite(MOTEUR_GAUCHE_ARRIERE, LOW);
 }
 
-// Fonction permettant de faire reculer la voiture électrique (iPWM -> 0 à 255).
-void Reculer(int iPWM) {
+// Fonction permettant de faire reculer la voiture électrique (iPuissance -> 0 à 100%).
+void Reculer(int iPuissance) {
+  int iPWM = map(iPuissance, 0, 100, 0, 255);
   analogWrite(VITESSE_MOTEUR_GAUCHE, iPWM);
   analogWrite(VITESSE_MOTEUR_DROIT, iPWM);
   digitalWrite(MOTEUR_DROIT_AVANT, LOW);
@@ -102,8 +105,9 @@ void Reculer(int iPWM) {
   digitalWrite(MOTEUR_GAUCHE_ARRIERE, HIGH);
 }
 
-// Fonction permettant de faire tourner à droite la voiture électrique (iPWM -> 0 à 255).
-void Tourner_Droite(int iPWM) {
+// Fonction permettant de faire tourner à droite la voiture électrique (iPuissance -> 0 à 100%).
+void Tourner_Droite(int iPuissance) {
+  int iPWM = map(iPuissance, 0, 100, 0, 255);
   analogWrite(VITESSE_MOTEUR_GAUCHE, 0);
   analogWrite(VITESSE_MOTEUR_DROIT, iPWM);
   digitalWrite(MOTEUR_DROIT_AVANT, HIGH);
@@ -112,8 +116,9 @@ void Tourner_Droite(int iPWM) {
   digitalWrite(MOTEUR_GAUCHE_ARRIERE, LOW);
 }
 
-// Fonction permettant de faire tourner à gauche la voiture électrique (iPWM -> 0 à 255).
-void Tourner_Gauche(int iPWM) {
+// Fonction permettant de faire tourner à gauche la voiture électrique (iPuissance -> 0 à 100%).
+void Tourner_Gauche(int iPuissance) {
+  int iPWM = map(iPuissance, 0, 100, 0, 255);
   analogWrite(VITESSE_MOTEUR_GAUCHE, iPWM);
   analogWrite(VITESSE_MOTEUR_DROIT, 0);
   digitalWrite(MOTEUR_DROIT_AVANT, LOW);
@@ -155,13 +160,10 @@ void Allumer_Eteindre_Ampoule_Gauche(bool bEtat) {
   }
 }
 
-// Fonction permettant d'allumer ou d'éteindre la diode électroluminescente (0 ou 1).
-void Allumer_Eteindre_DEL(bool bEtat) {
-  if (bEtat == 1) {
-    digitalWrite(DEL, HIGH);
-  } else {
-    digitalWrite(DEL, LOW);
-  }
+// Fonction permettant de contrôler l'éclairage de la diode électroluminescente (iLuminosite -> 0 à 100%).
+void Allumer_Eteindre_DEL(int iLuminosite) {
+  int iPWM = map(iLuminosite, 0, 100, 0, 255);
+  analogWrite(DEL, iPWM);
 }
 
 // Fonction permettant de calculer la tension du potentiomètre.
@@ -192,7 +194,7 @@ int Lecture_Distance(void) {
 }
 
 // Fonction permettant d'émettre un son.
-void Buzzer(int iFrequence, long lDuree){
+void Buzzer(int iFrequence, long lDuree) {
   tone(BUZZER, iFrequence, lDuree);
 }
 ```
