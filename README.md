@@ -20,8 +20,6 @@ Ce module vient se connecter sous le châssis de la voiture électrique 33005.10
 
 ## Ressources à télécharger :
 
-- Documentation : [Télécharger]()
-
 - Arduino IDE : [Télécharger](https://www.arduino.cc/en/software)
 
 - mBlock : [Télécharger](https://mblock.cc/pages/downloads)
