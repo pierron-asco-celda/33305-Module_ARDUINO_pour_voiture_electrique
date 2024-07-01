@@ -11,9 +11,11 @@ Ce module vient se connecter sous le châssis de la voiture électrique 33005.10
 </div>
 
 ## Caractéristiques techniques :
-- Compatible Arduino™ Nano
+- Compatible Arduino™ Nano*
 - Équipée d'un capteur ultrasons et d'un buzzer
 - Dimensions (L x l x h) : 70 x 45 x 25 mm
+
+\*L'utilisation d'une carte non officielle peut altérer et restreindre l'expérience d'utilisation de la maquette !
 
 ## Environnement nécessaire :
 - Une voiture électrique [33005](https://www.pierron.fr/voiture-electrique.html)
@@ -23,6 +25,8 @@ Ce module vient se connecter sous le châssis de la voiture électrique 33005.10
 - Arduino IDE : [Télécharger](https://www.arduino.cc/en/software)
 
 - mBlock : [Télécharger](https://mblock.cc/pages/downloads)
+
+- Documentation : [Télécharger](https://github.com/pierron-asco-celda/33305-Module_ARDUINO_pour_voiture_electrique/blob/main/MODULE%20ARDUINO%20POUR%20VOITURE%20%C3%89LECTRIQUE.txt)
 
 ## Programme de démonstration :
 
